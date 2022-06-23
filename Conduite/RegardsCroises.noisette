@@ -115,7 +115,7 @@
               "shifters": [
                 {
                   "type": 0,
-                  "width": 178,
+                  "width": 184,
                   "height": 412,
                   "currentContent": "Sequences",
                   "tabs": [
@@ -126,7 +126,7 @@
                 },
                 {
                   "type": 0,
-                  "width": 1118,
+                  "width": 1574,
                   "height": 412,
                   "currentContent": "Sequence Editor",
                   "tabs": [
@@ -137,7 +137,7 @@
                 },
                 {
                   "type": 0,
-                  "width": 612,
+                  "width": 150,
                   "height": 412,
                   "currentContent": "Logger",
                   "tabs": [
@@ -161,6 +161,555 @@
     "windows": null
   },
   "modules": {
+    "items": [
+      {
+        "niceName": "TD OSCQuery",
+        "type": "OSCQuery",
+        "scripts": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "params": {
+          "parameters": [
+            {
+              "value": "TD OSC Query Server",
+              "controlAddress": "/serverName"
+            }
+          ],
+          "containers": {
+            "output": {
+              "parameters": [
+                {
+                  "value": "127.0.0.1",
+                  "controlAddress": "/remoteHost"
+                },
+                {
+                  "value": 9000,
+                  "hexMode": false,
+                  "controlAddress": "/remotePort"
+                },
+                {
+                  "value": 5678,
+                  "hexMode": false,
+                  "controlAddress": "/customOSCPort",
+                  "enabled": false
+                }
+              ]
+            }
+          }
+        },
+        "templates": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "values": {
+          "containers": {
+            "Lines": {
+              "containers": {
+                "Custom": {
+                  "owned": true,
+                  "niceName": "Custom"
+                },
+                "Horizontal": {
+                  "owned": true,
+                  "niceName": "Horizontal"
+                }
+              },
+              "owned": true,
+              "niceName": "Lines"
+            }
+          }
+        },
+        "treeData": {
+          "DESCRIPTION": "TD OSC Query Server",
+          "CONTENTS": {
+            "Lines": {
+              "CONTENTS": {
+                "Custom": {
+                  "CONTENTS": {
+                    "Rows": {
+                      "TYPE": "i",
+                      "DESCRIPTION": "Rows",
+                      "FULL_PATH": "/Lines/Custom/Rows",
+                      "VALUE": [
+                        80
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 500.0,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Column": {
+                      "TYPE": "i",
+                      "DESCRIPTION": "Column",
+                      "FULL_PATH": "/Lines/Custom/Column",
+                      "VALUE": [
+                        107
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 500.0,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Linewidth": {
+                      "TYPE": "f",
+                      "DESCRIPTION": "Linewidth",
+                      "FULL_PATH": "/Lines/Custom/Linewidth",
+                      "VALUE": [
+                        0.95
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 10.0,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Yspeed": {
+                      "TYPE": "f",
+                      "DESCRIPTION": "Yspeed",
+                      "FULL_PATH": "/Lines/Custom/Yspeed",
+                      "VALUE": [
+                        0.0
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 1.0,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Resetyposition": {
+                      "TYPE": "N",
+                      "DESCRIPTION": "Resetyposition",
+                      "FULL_PATH": "/Lines/Custom/Resetyposition",
+                      "ACCESS": 3
+                    },
+                    "Redsquare": {
+                      "TYPE": "f",
+                      "DESCRIPTION": "Redsquare",
+                      "FULL_PATH": "/Lines/Custom/Redsquare",
+                      "VALUE": [
+                        ""
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 1.0,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Showredsquare": {
+                      "TYPE": "F",
+                      "DESCRIPTION": "Showredsquare",
+                      "FULL_PATH": "/Lines/Custom/Showredsquare",
+                      "VALUE": [
+                        false
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 1,
+                          "MIN": 0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Circleheight": {
+                      "TYPE": "f",
+                      "DESCRIPTION": "Circleheight",
+                      "FULL_PATH": "/Lines/Custom/Circleheight",
+                      "VALUE": [
+                        0.2820000052452087
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 0.5,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Squareradius": {
+                      "TYPE": "f",
+                      "DESCRIPTION": "Squareradius",
+                      "FULL_PATH": "/Lines/Custom/Squareradius",
+                      "VALUE": [
+                        0.1169999986886978
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 1.0,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Harmon": {
+                      "TYPE": "i",
+                      "DESCRIPTION": "Harmon",
+                      "FULL_PATH": "/Lines/Custom/Harmon",
+                      "VALUE": [
+                        7
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 10.0,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Spread": {
+                      "TYPE": "f",
+                      "DESCRIPTION": "Spread",
+                      "FULL_PATH": "/Lines/Custom/Spread",
+                      "VALUE": [
+                        0.0
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 20.0,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Gain": {
+                      "TYPE": "f",
+                      "DESCRIPTION": "Gain",
+                      "FULL_PATH": "/Lines/Custom/Gain",
+                      "VALUE": [
+                        2.0
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 2.0,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Amp": {
+                      "TYPE": "f",
+                      "DESCRIPTION": "Amp",
+                      "FULL_PATH": "/Lines/Custom/Amp",
+                      "VALUE": [
+                        0.38
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 2.0,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Backgrounlines": {
+                      "TYPE": "f",
+                      "DESCRIPTION": "Backgrounlines",
+                      "FULL_PATH": "/Lines/Custom/Backgrounlines",
+                      "VALUE": [
+                        ""
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 1.0,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Period": {
+                      "TYPE": "f",
+                      "DESCRIPTION": "Period",
+                      "FULL_PATH": "/Lines/Custom/Period",
+                      "VALUE": [
+                        2.0
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 2.0,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Amp2": {
+                      "TYPE": "f",
+                      "DESCRIPTION": "Amp2",
+                      "FULL_PATH": "/Lines/Custom/Amp2",
+                      "VALUE": [
+                        0.0
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 2.0,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Gain2": {
+                      "TYPE": "f",
+                      "DESCRIPTION": "Gain2",
+                      "FULL_PATH": "/Lines/Custom/Gain2",
+                      "VALUE": [
+                        0.0
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 2.0,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Mouse": {
+                      "TYPE": "f",
+                      "DESCRIPTION": "Mouse",
+                      "FULL_PATH": "/Lines/Custom/Mouse",
+                      "VALUE": [
+                        ""
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 1.0,
+                          "MIN": 0.0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
+                    "Mousecontrolled": {
+                      "TYPE": "T",
+                      "DESCRIPTION": "Mousecontrolled",
+                      "FULL_PATH": "/Lines/Custom/Mousecontrolled",
+                      "VALUE": [
+                        true
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 1,
+                          "MIN": 0
+                        }
+                      ],
+                      "ACCESS": 3
+                    }
+                  }
+                },
+                "Horizontal": {
+                  "CONTENTS": {
+                    "Growfromright": {
+                      "TYPE": "T",
+                      "DESCRIPTION": "Growfromright",
+                      "FULL_PATH": "/Lines/Horizontal/Growfromright",
+                      "VALUE": [
+                        true
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 1,
+                          "MIN": 0
+                        }
+                      ],
+                      "ACCESS": 3
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "niceName": "MIDI",
+        "type": "MIDI",
+        "scripts": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "params": {
+          "parameters": [
+            {
+              "value": [
+                "\\\\?\\root#media#0000#{6994ad04-93ef-11d0-a3cc-00a0c9223196}\\tevmidi0",
+                ""
+              ],
+              "controlAddress": "/devices"
+            }
+          ],
+          "containers": {
+            "pass_through": {
+            }
+          }
+        },
+        "templates": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "values": {
+          "parameters": [
+            {
+              "value": 0,
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 1,
+              "pitchOrNumber": 0,
+              "MIDIType": 0,
+              "controlAddress": "/_1_C_2",
+              "type": "MIDI Value",
+              "niceName": "[1] C-2",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 1 : C-2",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": 62,
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 1,
+              "pitchOrNumber": 3,
+              "MIDIType": 2,
+              "controlAddress": "/_1_CC3",
+              "type": "MIDI Value",
+              "niceName": "[1] CC3",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 1 : CC3",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": 106,
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 1,
+              "pitchOrNumber": 4,
+              "MIDIType": 2,
+              "controlAddress": "/_1_CC4",
+              "type": "MIDI Value",
+              "niceName": "[1] CC4",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 1 : CC4",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": 81,
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 1,
+              "pitchOrNumber": 6,
+              "MIDIType": 2,
+              "controlAddress": "/_1_CC6",
+              "type": "MIDI Value",
+              "niceName": "[1] CC6",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 1 : CC6",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": 43,
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 1,
+              "pitchOrNumber": 7,
+              "MIDIType": 2,
+              "controlAddress": "/_1_CC7",
+              "type": "MIDI Value",
+              "niceName": "[1] CC7",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 1 : CC7",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "value": 56,
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 1,
+              "pitchOrNumber": 8,
+              "MIDIType": 2,
+              "controlAddress": "/_1_CC8",
+              "type": "MIDI Value",
+              "niceName": "[1] CC8",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 1 : CC8",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            },
+            {
+              "minValue": 0,
+              "maxValue": 127,
+              "default": 0,
+              "hexMode": false,
+              "channel": 1,
+              "pitchOrNumber": 123,
+              "MIDIType": 2,
+              "controlAddress": "/_1_CC123",
+              "type": "MIDI Value",
+              "niceName": "[1] CC123",
+              "customizable": false,
+              "removable": true,
+              "description": "Channel 1 : CC123",
+              "hideInEditor": false,
+              "feedbackOnly": false
+            }
+          ],
+          "containers": {
+            "tempo": {
+              "parameters": [
+                {
+                  "value": 120.0192031860352,
+                  "controlAddress": "/bpm"
+                }
+              ]
+            },
+            "mtc": {
+            }
+          }
+        }
+      }
+    ],
     "viewOffset": [
       0,
       0
@@ -175,6 +724,66 @@
     "viewZoom": 1.0
   },
   "states": {
+    "items": [
+      {
+        "parameters": [
+          {
+            "value": [
+              -62.0,
+              -45.0
+            ],
+            "controlAddress": "/viewUIPosition"
+          },
+          {
+            "value": true,
+            "controlAddress": "/active"
+          }
+        ],
+        "niceName": "State",
+        "type": "State",
+        "processors": {
+          "items": [
+            {
+              "niceName": "Init",
+              "editorIsCollapsed": true,
+              "type": "Action",
+              "conditions": {
+                "items": [
+                  {
+                    "niceName": "From Input Value",
+                    "type": "From Input Value"
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "consequences": {
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              },
+              "consequencesOff": {
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              }
+            }
+          ],
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        }
+      }
+    ],
     "viewOffset": [
       0,
       0
@@ -198,6 +807,400 @@
     }
   },
   "sequences": {
+    "items": [
+      {
+        "parameters": [
+          {
+            "value": 484.0,
+            "controlAddress": "/totalTime"
+          },
+          {
+            "value": 0.0,
+            "controlAddress": "/viewStartTime"
+          },
+          {
+            "value": 42.44058227539062,
+            "controlAddress": "/viewEndTime"
+          }
+        ],
+        "niceName": "Acte 1",
+        "type": "Sequence",
+        "layers": {
+          "hideInEditor": true,
+          "items": [
+            {
+              "parameters": [
+                {
+                  "value": 60.0,
+                  "controlAddress": "/listSize"
+                },
+                {
+                  "value": 60,
+                  "hexMode": false,
+                  "controlAddress": "/uiHeight"
+                }
+              ],
+              "niceName": "Trigger",
+              "type": "Trigger",
+              "triggers": {
+                "hideInEditor": true,
+                "items": [
+                  {
+                    "parameters": [
+                      {
+                        "value": 2.460000038146973,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.3499999940395355,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "Store Go Up",
+                    "type": "BaseItem",
+                    "consequences": {
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 8.159999847412109,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.0,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "White Square ON",
+                    "type": "BaseItem",
+                    "consequences": {
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 14.81999969482422,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.375,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "Noise On Line",
+                    "type": "BaseItem",
+                    "consequences": {
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 443.7999877929688,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.2000000029802322,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "Gong Up",
+                    "type": "BaseItem",
+                    "consequences": {
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 461.6799926757812,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.7666666507720947,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "Kick",
+                    "type": "BaseItem",
+                    "consequences": {
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              }
+            }
+          ],
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "cues": {
+          "hideInEditor": true,
+          "items": [
+            {
+              "parameters": [
+                {
+                  "value": 445.3800048828125,
+                  "controlAddress": "/time"
+                }
+              ],
+              "niceName": "Cue",
+              "type": "BaseItem"
+            }
+          ],
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "editing": true
+      },
+      {
+        "parameters": [
+          {
+            "value": 182.3999938964844,
+            "controlAddress": "/totalTime"
+          },
+          {
+            "value": 182.3999938964844,
+            "controlAddress": "/viewEndTime"
+          }
+        ],
+        "niceName": "Acte 2",
+        "type": "Sequence",
+        "layers": {
+          "hideInEditor": true,
+          "items": [
+            {
+              "parameters": [
+                {
+                  "value": 60.0,
+                  "controlAddress": "/listSize"
+                },
+                {
+                  "value": 60,
+                  "hexMode": false,
+                  "controlAddress": "/uiHeight"
+                }
+              ],
+              "niceName": "Trigger",
+              "type": "Trigger",
+              "triggers": {
+                "hideInEditor": true,
+                "items": [
+                  {
+                    "parameters": [
+                      {
+                        "value": 0.0,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.1416666656732559,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "Build  Magrid",
+                    "type": "BaseItem",
+                    "consequences": {
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              }
+            }
+          ],
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "cues": {
+          "hideInEditor": true,
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        }
+      },
+      {
+        "parameters": [
+          {
+            "value": 167.0,
+            "controlAddress": "/totalTime"
+          },
+          {
+            "value": 167.0,
+            "controlAddress": "/viewEndTime"
+          }
+        ],
+        "niceName": "Acte 3",
+        "type": "Sequence",
+        "layers": {
+          "hideInEditor": true,
+          "items": [
+            {
+              "parameters": [
+                {
+                  "value": 60.0,
+                  "controlAddress": "/listSize"
+                },
+                {
+                  "value": 60,
+                  "hexMode": false,
+                  "controlAddress": "/uiHeight"
+                }
+              ],
+              "niceName": "Trigger",
+              "type": "Trigger",
+              "triggers": {
+                "hideInEditor": true,
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              }
+            }
+          ],
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "cues": {
+          "hideInEditor": true,
+          "items": [
+            {
+              "parameters": [
+                {
+                  "value": 0.0,
+                  "controlAddress": "/time"
+                }
+              ],
+              "niceName": "Entr\u00e9e de Anne",
+              "type": "BaseItem"
+            }
+          ],
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        }
+      },
+      {
+        "niceName": "Acte 4",
+        "type": "Sequence",
+        "layers": {
+          "hideInEditor": true,
+          "items": [
+            {
+              "parameters": [
+                {
+                  "value": 60.0,
+                  "controlAddress": "/listSize"
+                },
+                {
+                  "value": 60,
+                  "hexMode": false,
+                  "controlAddress": "/uiHeight"
+                }
+              ],
+              "niceName": "Trigger",
+              "type": "Trigger",
+              "triggers": {
+                "hideInEditor": true,
+                "items": [
+                  {
+                    "parameters": [
+                      {
+                        "value": 0.0,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.0833333283662796,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "Build Sli",
+                    "type": "BaseItem",
+                    "consequences": {
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  }
+                ],
+                "viewOffset": [
+                  0,
+                  0
+                ],
+                "viewZoom": 1.0
+              }
+            }
+          ],
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "cues": {
+          "hideInEditor": true,
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        }
+      }
+    ],
     "viewOffset": [
       0,
       0
