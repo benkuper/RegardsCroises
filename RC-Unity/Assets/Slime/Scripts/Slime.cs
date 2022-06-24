@@ -9,22 +9,24 @@ public class Slime : MonoBehaviour
     public int width = 1920, height = 1080;
     public int depth = 1;
     public int numAgents = 1000000;
-    [Range(0,500)]
+    [Range(0, 500)]
     public float moveSpeed = 50.0f;
-    [Range(0,50)]
+    [Range(0, 100)]
     public float diffuseSpeed = 10.0f;
-    [Range(0,10)]
+    [Range(0, 10)]
     public float evaporateSpeed = 0.3f;
 
-    [Range(0,50)]
+    [Range(0, 50)]
     public int senseRange = 3;
-    [Range(0,100)]
+    [Range(0, 100)]
     public float sensorLength = 8.0f;
     [Range(0, 180)]
-    public float sensorAngleSpacing = 30.0f; 
-    [Range(0,180)]
+    public float sensorAngleSpacing = 30.0f;
+    [Range(0, 180)]
     public float turnSpeed = 50.0f;
     public float marchingError = 0.1f;
+
+    public Vector2 initPos = Vector2.one * .5f;
     public float initRadius = 0.1f;
 
     public Texture ghostTrailMap;
@@ -35,18 +37,26 @@ public class Slime : MonoBehaviour
 
     //[Range(0, 1)]
     //public float sourceWeight = 1;
-    [Range(0,1)]
+    [Range(0, 1)]
     public float ghostWeight;
 
     [Range(0, 1)]
     public float agentOpacity = .2f;
 
-    [Range(-500,500)]
-    public float ghostParamFac = 0;
+    [Range(-20, 20)]
+    public float ghostSensorLengthFactor = 0;
+
+    [Range(-1,1)]
+    public float ghostOpacityFactor = 0;
+
+    [Range(-100,100)]
+    public float ghostSpeedFactor = 0;
 
     private Dictionary<string, int> kernelIndices;
 
     public Transform[] targets;
+
+    public bool resetPoint;
 
     public struct Agent
     {
@@ -81,14 +91,23 @@ public class Slime : MonoBehaviour
             float x = Mathf.Cos(angle) * len;
             float y = Mathf.Sin(angle) * len;
 
-            agents[i].position = new Vector2(width / 2 + x, height / 2 + y);
+            agents[i].position = new Vector2(width * initPos.x + x, height * initPos.y + y);
             agents[i].angle = angle + Mathf.PI;
 
             Vector4 type = Vector4.zero;
-            type[Random.Range(0, 3)] = 1f;
+            type[0] = 1;// Random.Range(0, 3)] = 1f;
             agents[i].type = type;
         }
         agentsBuffer.SetData(agents);
+    }
+
+    private void Update()
+    {
+        if(resetPoint)
+        {
+            resetPoint = false;
+            reset();
+        }
     }
 
     void FixedUpdate()
@@ -149,7 +168,9 @@ public class Slime : MonoBehaviour
 
 
         shader.SetFloat("targetWeight", posWeights[0]);
-        shader.SetFloat("ghostParamFactor", ghostParamFac);
+        shader.SetFloat("ghostSensorLengthFactor", ghostSensorLengthFactor);
+        shader.SetFloat("ghostAgentOpacityFactor", ghostOpacityFactor);
+        shader.SetFloat("ghostSpeedFactor", ghostSpeedFactor);
         shader.SetVector("targetPos", new Vector4(pos[0].x, pos[0].y));
 
         shader.Dispatch(kernelIndices["Postprocess"], width / 8, height / 8, 1);
@@ -157,7 +178,7 @@ public class Slime : MonoBehaviour
         trailMap.Release();
         trailMap = trailMapProcessed;
 
-        GetComponent<MeshRenderer>().sharedMaterial.SetTexture("_BaseTexture",trailMap);
+        GetComponent<MeshRenderer>().sharedMaterial.SetTexture("_BaseTexture", trailMap);
     }
 
     private void createNewTexture(ref RenderTexture renderTexture)

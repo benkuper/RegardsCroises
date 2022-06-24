@@ -1,5 +1,20 @@
 {
   "dependencies": {
+    "com.benkuper.oscquery": {
+      "version": "file:D:/Documents/Perso/Projects/Unity-OSCQuery",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
+    "com.domybest.mybox": {
+      "version": "https://github.com/Deadcows/MyBox.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0"
+      },
+      "hash": "553c6fa73386138a42aff8b00e096183149a4fbb"
+    },
     "com.endel.nativewebsocket": {
       "version": "https://github.com/endel/NativeWebSocket.git#upm",
       "depth": 0,
@@ -237,6 +252,14 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
+    },
+    "jp.keijiro.klak.spout": {
+      "version": "file:../jp.keijiro.klak.spout",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.modules.screencapture": "1.0.0"
+      }
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

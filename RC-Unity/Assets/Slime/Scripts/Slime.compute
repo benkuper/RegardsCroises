@@ -22,7 +22,9 @@ float sourceWeight;
 float ghostWeight;
 float4 ghostSize;
 
-float ghostParamFactor;
+float ghostSensorLengthFactor;
+float ghostAgentOpacityFactor;
+float ghostSpeedFactor;
 
 float agentOpacity;
 
@@ -69,7 +71,7 @@ float sense(Agent agent, float angle)
 			float gWeight = GhostTrailMap[gpos].a * ghostWeight;
 			float4 ghostValue = GhostTrailMap[gpos] * gWeight;
 			
-			pos += sensorDir * GhostTrailMap[gpos].r * ghostParamFactor;
+			pos += sensorDir * GhostTrailMap[gpos].r * ghostSensorLengthFactor;
 			
 			float4 sourceValue = TrailMap[pos] * (1 - gWeight);
 			float4 value = sourceValue + ghostValue;
@@ -101,7 +103,7 @@ void Update(uint3 id : SV_DispatchThreadID)
 
 	float2 ghostRatio = float2(width / ghostSize.x, height / ghostSize.y);
 	int2 gpos = newPos / ghostRatio;
-	float opFac = GhostTrailMap[agent.pos].r * ghostParamFactor;
+	float opFac = GhostTrailMap[agent.pos].r * ghostSpeedFactor;
 
 	newPos += dir * deltaTime * opFac;
 
@@ -125,9 +127,9 @@ void Update(uint3 id : SV_DispatchThreadID)
 
 	agents[id.x].pos = newPos;
 
-	
-	TrailMap[int2(newPos.x, newPos.y)] -= agentOpacity;
-	TrailMap[int2(newPos.x, newPos.y)] += agent.type * agentOpacity * 2;
+	float ao = agentOpacity + GhostTrailMap[agent.pos].r * ghostAgentOpacityFactor;
+	TrailMap[int2(newPos.x, newPos.y)] -= ao;
+	TrailMap[int2(newPos.x, newPos.y)] += agent.type * ao * 2;
 
 	float forwardSenseWeight = sense(agent, 0);
 	float leftSenseWeight = sense(agent, sensorAngleSpacing);
