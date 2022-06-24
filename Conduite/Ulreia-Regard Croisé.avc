@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Composition name="Composition" uniqueId="1656014470294" numDecks="3" currentDeckIndex="1" numLayers="5" numColumns="9" compositionIsRelative="0">
+<Composition name="Composition" uniqueId="1656014606523" numDecks="3" currentDeckIndex="1" numLayers="5" numColumns="9" compositionIsRelative="0">
 	<versionInfo name="Resolume Arena" majorVersion="7" minorVersion="6" microVersion="0" revision="79034"/>
 	<CompositionInfo name="Ulreia-Regard Croisé" description="" width="1920" height="1080">
 		<DeckInfo name="Unity Spout Oxipital" id="1650619570192" closed="0"/>
@@ -8,8 +8,8 @@
 	</CompositionInfo>
 	<Params name="Params">
 		<Param name="Name" T="STRING" default="" value="Ulreia-Regard Croisé"/>
-		<ParamRange name="Speed" T="DOUBLE" default="1" value="0.99999999999966437958">
-			<PhaseSourceStatic name="PhaseSourceStatic" phase="0.24999999999995337063"/>
+		<ParamRange name="Speed" T="DOUBLE" default="1" value="0.99999999999963862241">
+			<PhaseSourceStatic name="PhaseSourceStatic" phase="0.24999999999994948485"/>
 		</ParamRange>
 		<Param name="KeyboardShortcutPreset" T="STRING" default="" value="Default"/>
 		<Param name="MidiShortcutPreset" T="STRING" default="" value="Default"/>
@@ -31,7 +31,7 @@
 				<PhaseSourceStatic name="PhaseSourceStatic" phase="0.032958984375"/>
 			</ParamRange>
 		</Params>
-		<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueTypeId="RenderPassChain" uniqueId="1656014470311" baseType="RenderPassChain">
+		<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueTypeId="RenderPassChain" uniqueId="1656014606540" baseType="RenderPassChain">
 			<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueTypeId="17122039101699797593" uniqueId="1650619570188" baseType="Effect" index="0">
 				<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
 			</RenderPass>
@@ -55,7 +55,7 @@
 					<PhaseSourceStatic name="PhaseSourceStatic" phase="0.032958984375"/>
 				</ParamRange>
 			</Params>
-			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueTypeId="RenderPassChain" uniqueId="1656014470524" baseType="RenderPassChain">
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueTypeId="RenderPassChain" uniqueId="1656014606613" baseType="RenderPassChain">
 				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueTypeId="17122039101699797593" uniqueId="1650619570045" baseType="Effect" index="0">
 					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
 				</RenderPass>
@@ -91,7 +91,7 @@
 					<PhaseSourceStatic name="PhaseSourceStatic" phase="0.032958984375"/>
 				</ParamRange>
 			</Params>
-			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueTypeId="RenderPassChain" uniqueId="1656014470535" baseType="RenderPassChain">
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueTypeId="RenderPassChain" uniqueId="1656014606624" baseType="RenderPassChain">
 				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueTypeId="17122039101699797593" uniqueId="1650619570057" baseType="Effect" index="0">
 					<Params name="Params">
 						<ParamRange name="Position X" T="DOUBLE" default="0" value="319">
@@ -147,7 +147,7 @@
 					<PhaseSourceStatic name="PhaseSourceStatic" phase="0.032958984375"/>
 				</ParamRange>
 			</Params>
-			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueTypeId="RenderPassChain" uniqueId="1656014470546" baseType="RenderPassChain">
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueTypeId="RenderPassChain" uniqueId="1656014606602" baseType="RenderPassChain">
 				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueTypeId="17122039101699797593" uniqueId="1650619570069" baseType="Effect" index="0">
 					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
 				</RenderPass>
@@ -198,7 +198,7 @@
 					<PhaseSourceStatic name="PhaseSourceStatic" phase="0.032958984375"/>
 				</ParamRange>
 			</Params>
-			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueTypeId="RenderPassChain" uniqueId="1656014470557" baseType="RenderPassChain">
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueTypeId="RenderPassChain" uniqueId="1656014607044" baseType="RenderPassChain">
 				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueTypeId="17122039101699797593" uniqueId="1655927034886" baseType="Effect" index="0">
 					<Params name="Params">
 						<ParamRange name="Position Y" T="DOUBLE" default="0" value="292.5">
@@ -245,7 +245,7 @@
 					<PhaseSourceStatic name="PhaseSourceStatic" phase="0.032958984375"/>
 				</ParamRange>
 			</Params>
-			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueTypeId="RenderPassChain" uniqueId="1656014470568" baseType="RenderPassChain">
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueTypeId="RenderPassChain" uniqueId="1656014607055" baseType="RenderPassChain">
 				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueTypeId="17122039101699797593" uniqueId="1655927034898" baseType="Effect" index="0">
 					<Params name="Params">
 						<ParamRange name="Scale" T="DOUBLE" default="100" value="196.6364812419146233">
@@ -288,7 +288,7 @@
 					<PhaseSourceStatic name="PhaseSourceStatic" phase="0.032958984375"/>
 				</ParamRange>
 			</Params>
-			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueTypeId="RenderPassChain" uniqueId="1656014470319" baseType="RenderPassChain">
+			<RenderPass name="RenderPassChain" type="RenderPassChain" uniqueTypeId="RenderPassChain" uniqueId="1656014606548" baseType="RenderPassChain">
 				<RenderPass storage="0" name="Transform" type="TransformEffect" uniqueTypeId="17122039101699797593" uniqueId="1650619570190" baseType="Effect" index="0">
 					<View name="View" bCanBeDisabled="0" bCanBeRemoved="0"/>
 				</RenderPass>

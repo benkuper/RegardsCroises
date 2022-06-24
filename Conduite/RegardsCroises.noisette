@@ -126,7 +126,7 @@
                 },
                 {
                   "type": 0,
-                  "width": 1574,
+                  "width": 1391,
                   "height": 412,
                   "currentContent": "Sequence Editor",
                   "tabs": [
@@ -137,7 +137,7 @@
                 },
                 {
                   "type": 0,
-                  "width": 150,
+                  "width": 333,
                   "height": 412,
                   "currentContent": "Logger",
                   "tabs": [
@@ -213,10 +213,56 @@
             "Lines": {
               "containers": {
                 "Custom": {
+                  "parameters": [
+                    {
+                      "value": 118,
+                      "hexMode": false,
+                      "controlAddress": "/Rows"
+                    },
+                    {
+                      "value": 116,
+                      "hexMode": false,
+                      "controlAddress": "/Column"
+                    },
+                    {
+                      "value": 1.014492750167847,
+                      "controlAddress": "/Linewidth"
+                    },
+                    {
+                      "value": true,
+                      "controlAddress": "/Showredsquare"
+                    },
+                    {
+                      "value": 0.02800000086426735,
+                      "controlAddress": "/Squareradius"
+                    },
+                    {
+                      "value": 0.3768116235733032,
+                      "controlAddress": "/Period"
+                    },
+                    {
+                      "value": 0.8405797481536865,
+                      "controlAddress": "/Amp2"
+                    },
+                    {
+                      "value": 0.0,
+                      "controlAddress": "/Gain2"
+                    },
+                    {
+                      "value": 0.0,
+                      "controlAddress": "/Mouse"
+                    }
+                  ],
                   "owned": true,
                   "niceName": "Custom"
                 },
                 "Horizontal": {
+                  "parameters": [
+                    {
+                      "value": false,
+                      "controlAddress": "/Growfromright"
+                    }
+                  ],
                   "owned": true,
                   "niceName": "Horizontal"
                 }
@@ -238,7 +284,7 @@
                       "DESCRIPTION": "Rows",
                       "FULL_PATH": "/Lines/Custom/Rows",
                       "VALUE": [
-                        80
+                        118
                       ],
                       "RANGE": [
                         {
@@ -253,7 +299,7 @@
                       "DESCRIPTION": "Column",
                       "FULL_PATH": "/Lines/Custom/Column",
                       "VALUE": [
-                        107
+                        116
                       ],
                       "RANGE": [
                         {
@@ -268,7 +314,7 @@
                       "DESCRIPTION": "Linewidth",
                       "FULL_PATH": "/Lines/Custom/Linewidth",
                       "VALUE": [
-                        0.95
+                        1.120000004768372
                       ],
                       "RANGE": [
                         {
@@ -315,11 +361,11 @@
                       "ACCESS": 3
                     },
                     "Showredsquare": {
-                      "TYPE": "F",
+                      "TYPE": "T",
                       "DESCRIPTION": "Showredsquare",
                       "FULL_PATH": "/Lines/Custom/Showredsquare",
                       "VALUE": [
-                        false
+                        true
                       ],
                       "RANGE": [
                         {
@@ -349,7 +395,7 @@
                       "DESCRIPTION": "Squareradius",
                       "FULL_PATH": "/Lines/Custom/Squareradius",
                       "VALUE": [
-                        0.1169999986886978
+                        0.02800000086426735
                       ],
                       "RANGE": [
                         {
@@ -513,6 +559,21 @@
                 },
                 "Horizontal": {
                   "CONTENTS": {
+                    "Usehorizontal": {
+                      "TYPE": "F",
+                      "DESCRIPTION": "Usehorizontal",
+                      "FULL_PATH": "/Lines/Horizontal/Usehorizontal",
+                      "VALUE": [
+                        false
+                      ],
+                      "RANGE": [
+                        {
+                          "MAX": 1,
+                          "MIN": 0
+                        }
+                      ],
+                      "ACCESS": 3
+                    },
                     "Growfromright": {
                       "TYPE": "T",
                       "DESCRIPTION": "Growfromright",
@@ -708,6 +769,54 @@
             }
           }
         }
+      },
+      {
+        "niceName": "Unity Magrid",
+        "type": "OSCQuery",
+        "scripts": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "params": {
+          "containers": {
+            "output": {
+              "parameters": [
+                {
+                  "value": false,
+                  "controlAddress": "/local"
+                },
+                {
+                  "value": "192.168.1.2",
+                  "controlAddress": "/remoteHost"
+                },
+                {
+                  "value": 9010,
+                  "hexMode": false,
+                  "controlAddress": "/remotePort"
+                },
+                {
+                  "value": 5678,
+                  "hexMode": false,
+                  "controlAddress": "/customOSCPort",
+                  "enabled": false
+                }
+              ]
+            }
+          }
+        },
+        "templates": {
+          "viewOffset": [
+            0,
+            0
+          ],
+          "viewZoom": 1.0
+        },
+        "values": {
+        },
+        "treeData": null
       }
     ],
     "viewOffset": [
@@ -761,6 +870,37 @@
                 "viewZoom": 1.0
               },
               "consequences": {
+                "items": [
+                  {
+                    "niceName": "Consequence",
+                    "type": "Consequence",
+                    "commandModule": "tdOSCQuery",
+                    "commandPath": "",
+                    "commandType": "Set Value",
+                    "command": {
+                      "parameters": [
+                        {
+                          "value": "/Lines/Custom/Linewidth",
+                          "controlAddress": "/target"
+                        },
+                        {
+                          "value": "All",
+                          "controlAddress": "/component"
+                        },
+                        {
+                          "value": "Equals",
+                          "controlAddress": "/operator"
+                        },
+                        {
+                          "value": 0.0,
+                          "controlAddress": "/value"
+                        }
+                      ],
+                      "paramLinks": {
+                      }
+                    }
+                  }
+                ],
                 "viewOffset": [
                   0,
                   0
@@ -848,17 +988,136 @@
                   {
                     "parameters": [
                       {
-                        "value": 2.460000038146973,
+                        "value": 2.300000190734863,
                         "controlAddress": "/time"
                       },
                       {
-                        "value": 0.3499999940395355,
+                        "value": 0.5249999761581421,
                         "controlAddress": "/flagY"
                       }
                     ],
-                    "niceName": "Store Go Up",
+                    "niceName": "Camille Start Talking",
                     "type": "BaseItem",
                     "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "tdOSCQuery",
+                          "commandPath": "",
+                          "commandType": "Go to Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/Lines/Custom/Linewidth",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": 0.0,
+                                "controlAddress": "/time"
+                              },
+                              {
+                                "value": 2.375886201858521,
+                                "controlAddress": "/value"
+                              }
+                            ],
+                            "containers": {
+                              "curve": {
+                                "parameters": [
+                                  {
+                                    "value": 1.0,
+                                    "controlAddress": "/length"
+                                  },
+                                  {
+                                    "value": [
+                                      0.0,
+                                      1.0
+                                    ],
+                                    "controlAddress": "/viewValueRange"
+                                  },
+                                  {
+                                    "value": [
+                                      0.0,
+                                      1.0
+                                    ],
+                                    "controlAddress": "/range",
+                                    "enabled": true
+                                  }
+                                ],
+                                "items": [
+                                  {
+                                    "parameters": [
+                                      {
+                                        "value": "Bezier",
+                                        "controlAddress": "/easingType"
+                                      }
+                                    ],
+                                    "niceName": "Key",
+                                    "containers": {
+                                      "easing": {
+                                        "parameters": [
+                                          {
+                                            "value": [
+                                              0.300000011920929,
+                                              0.0
+                                            ],
+                                            "controlAddress": "/anchor1"
+                                          },
+                                          {
+                                            "value": [
+                                              -0.300000011920929,
+                                              0.0
+                                            ],
+                                            "controlAddress": "/anchor2"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "type": "Key"
+                                  },
+                                  {
+                                    "parameters": [
+                                      {
+                                        "value": 1.0,
+                                        "controlAddress": "/position"
+                                      },
+                                      {
+                                        "value": 1.0,
+                                        "controlAddress": "/value"
+                                      },
+                                      {
+                                        "value": "Bezier",
+                                        "controlAddress": "/easingType"
+                                      }
+                                    ],
+                                    "niceName": "Key 1",
+                                    "containers": {
+                                      "easing": {
+                                      }
+                                    },
+                                    "type": "Key"
+                                  }
+                                ],
+                                "viewOffset": [
+                                  0,
+                                  0
+                                ],
+                                "viewZoom": 1.0
+                              }
+                            },
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
                       "viewOffset": [
                         0,
                         0
@@ -869,11 +1128,147 @@
                   {
                     "parameters": [
                       {
-                        "value": 8.159999847412109,
+                        "value": 7.699999809265137,
                         "controlAddress": "/time"
                       },
                       {
-                        "value": 0.0,
+                        "value": 0.625,
+                        "controlAddress": "/flagY"
+                      }
+                    ],
+                    "niceName": "Camille Stop Talking",
+                    "type": "BaseItem",
+                    "consequences": {
+                      "items": [
+                        {
+                          "niceName": "Consequence",
+                          "type": "Consequence",
+                          "commandModule": "tdOSCQuery",
+                          "commandPath": "",
+                          "commandType": "Go to Value",
+                          "command": {
+                            "parameters": [
+                              {
+                                "value": "/Lines/Custom/Linewidth",
+                                "controlAddress": "/target"
+                              },
+                              {
+                                "value": "All",
+                                "controlAddress": "/component"
+                              },
+                              {
+                                "value": "Equals",
+                                "controlAddress": "/operator"
+                              },
+                              {
+                                "value": 5.0,
+                                "controlAddress": "/time"
+                              }
+                            ],
+                            "containers": {
+                              "curve": {
+                                "parameters": [
+                                  {
+                                    "value": 1.0,
+                                    "controlAddress": "/length"
+                                  },
+                                  {
+                                    "value": [
+                                      0.0,
+                                      1.0
+                                    ],
+                                    "controlAddress": "/viewValueRange"
+                                  },
+                                  {
+                                    "value": [
+                                      0.0,
+                                      1.0
+                                    ],
+                                    "controlAddress": "/range",
+                                    "enabled": true
+                                  }
+                                ],
+                                "items": [
+                                  {
+                                    "parameters": [
+                                      {
+                                        "value": "Bezier",
+                                        "controlAddress": "/easingType"
+                                      }
+                                    ],
+                                    "niceName": "Key",
+                                    "containers": {
+                                      "easing": {
+                                        "parameters": [
+                                          {
+                                            "value": [
+                                              0.300000011920929,
+                                              0.0
+                                            ],
+                                            "controlAddress": "/anchor1"
+                                          },
+                                          {
+                                            "value": [
+                                              -0.300000011920929,
+                                              0.0
+                                            ],
+                                            "controlAddress": "/anchor2"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "type": "Key"
+                                  },
+                                  {
+                                    "parameters": [
+                                      {
+                                        "value": 1.0,
+                                        "controlAddress": "/position"
+                                      },
+                                      {
+                                        "value": 1.0,
+                                        "controlAddress": "/value"
+                                      },
+                                      {
+                                        "value": "Bezier",
+                                        "controlAddress": "/easingType"
+                                      }
+                                    ],
+                                    "niceName": "Key 1",
+                                    "containers": {
+                                      "easing": {
+                                      }
+                                    },
+                                    "type": "Key"
+                                  }
+                                ],
+                                "viewOffset": [
+                                  0,
+                                  0
+                                ],
+                                "viewZoom": 1.0
+                              }
+                            },
+                            "paramLinks": {
+                            }
+                          }
+                        }
+                      ],
+                      "viewOffset": [
+                        0,
+                        0
+                      ],
+                      "viewZoom": 1.0
+                    }
+                  },
+                  {
+                    "parameters": [
+                      {
+                        "value": 20.07999992370605,
+                        "controlAddress": "/time"
+                      },
+                      {
+                        "value": 0.1500000059604645,
                         "controlAddress": "/flagY"
                       }
                     ],
@@ -890,11 +1285,11 @@
                   {
                     "parameters": [
                       {
-                        "value": 14.81999969482422,
+                        "value": 24.79999923706055,
                         "controlAddress": "/time"
                       },
                       {
-                        "value": 0.375,
+                        "value": 0.5249999761581421,
                         "controlAddress": "/flagY"
                       }
                     ],
